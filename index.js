@@ -13,6 +13,6 @@ app.all("*", function (req, res) {
 	res.status(400).json("this route does not exist");
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
 	console.log("Server has server🤓");
 });
