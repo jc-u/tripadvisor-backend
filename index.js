@@ -4,10 +4,10 @@ const formRoutes = require("./routes/form");
 const cors = require("cors");
 const app = express();
 
-app.use(express());
-app.use(express.json());
-app.use(formRoutes);
 app.use(cors());
+app.use(express.json());
+app.use(express());
+app.use(formRoutes);
 
 app.all("*", function (req, res) {
 	res.status(400).json("this route does not exist");
